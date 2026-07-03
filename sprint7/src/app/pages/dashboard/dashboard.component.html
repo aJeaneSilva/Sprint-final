@@ -1,0 +1,21 @@
+<section class="d-flex gap-3 justify-content-around">
+<div class="shadow border border-black p-3">
+    <h2>Veículos</h2>
+    <select>
+        <option value="">Bronco Sport</option>
+        <option value="">Mustang</option>
+        <option value="">Ranger</option>
+        <option value="">Territory</option>
+    </select>
+</div>
+
+<app-card [titulo]="'Total de Vendas'" [valor]="veiculoSelecionado.volumetotal"/>
+<app-card [titulo]="'Conectados'" [valor]="veiculoSelecionado.connected"/>
+<app-card [titulo]="'Update Software'" [valor]="veiculoSelecionado.softwareUpdates"/>
+</section>
+<section>
+    <img src="http://localhost:3001/img/broncoSport.png" alt="Carro Ford selecionado">
+</section>
+<section>
+    <app-car-table></app-car-table>
+</section>

@@ -1,0 +1,39 @@
+<div class="caixa-de-login">
+  
+  <div class="lado-da-imagem">
+    <img src="/img/fotoparalogin.jpeg" alt="Carro da Ford">
+    <div class="texto-sobre-a-imagem">
+      <h2>Bem-vindos a Ford!</h2>
+      <p>Conecte-se à próxima geração de inovação.</p>
+    </div>
+  </div>
+  
+  <div class="lado-do-formulario">
+    <img src="/img/ford.png" alt="Logo Ford" class="logo">
+    <form [formGroup]="loginForm" (ngSubmit)="onContinuar()" class="formulario">
+      <h3 class="titulo-do-form">Entrar na Conta</h3>
+      
+      <div class="campo-de-entrada">
+        <label class="form-label">Nome</label>
+        <input formControlName="nome" type="email" class="meu-input-custom" placeholder="Digite seu nome de usuário">
+      </div>
+      
+      <div class="campo-de-entrada">
+        <label class="form-label">Senha</label> 
+        <input formControlName="senha" type="password" class="meu-input-custom" placeholder="Insira sua senha">
+      </div>
+      
+      <div class="campo-do-checkbox">
+          <input type="checkbox" class="form-check-input" id="aceitoTermos">
+          <label class="form-check-label" for="aceitoTermos">Sim. Li e concordo com os Termos e Condições</label>
+        </div>
+        <div class="campo-do-checkbox">
+          <input type="checkbox" class="form-check-input" id="aceitoTermos">
+          <label class="form-check-label" for="aceitoTermos">Sim.Também quero receber descontos e novidades.</label>
+        </div>
+
+      <button type="submit" class="botao-login">Continuar</button>
+      
+    </form>
+  </div>
+</div>

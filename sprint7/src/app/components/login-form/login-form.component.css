@@ -1,0 +1,151 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #002c5b;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.logo{
+  width: 30%;
+  display: flex;
+  margin-left: 60%;
+  margin-bottom: 25px;
+  
+}
+
+/*Talvez eu tire*/
+.caixa-de-login {
+  display: flex; 
+  width: 100%;
+  max-width: 850px;
+  height: 520px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  overflow: hidden; 
+}
+
+.lado-da-imagem {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* Película */
+.texto-sobre-a-imagem {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 44, 91, 0.3), rgba(0, 20, 43, 0.8));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 40px;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+.texto-sobre-a-imagem h2 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 1.8rem;
+}
+
+.lado-do-formulario {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+
+.formulario {
+  width: 100%;
+  max-width: 320px;
+}
+
+.titulo-do-form {
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #002c5b;
+  font-size: 1.6rem;
+}
+
+.campo-de-entrada {
+  margin-bottom: 18px;
+  width: 100%;
+}
+
+.campo-de-entrada .form-label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.meu-input-custom {
+  display: block;
+  width: 100% !important;
+  max-width: 100%;
+  border-radius: 8px;
+  padding: 10px 14px;
+  border: 1px solid #ced4da;
+  background-color: #f8f9fa;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.meu-input-custom:focus {
+  background-color: #ffffff;
+  border-color: #002c5b;
+  box-shadow: 0 0 0 4px rgba(0, 44, 91, 0.15);
+  outline: none;
+}
+
+.campo-do-checkbox {
+  margin-bottom: 14px;
+  display: flex;
+  align-items: flex-start;
+  font-size: 12px;
+  color: #333;
+  gap: 8px;
+}
+
+.meu-checkbox-custom {
+  margin-top: 4px;
+  cursor: pointer;
+}
+
+.form-check-label {
+  font-size: 14px;
+  color: #555;
+  cursor: pointer;
+  line-height: 1.3;
+}
+.botao-login {
+  width: 100%;
+  background-color: #104f87;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 15px;
+}
+
+.botao-login:hover {
+  background-color: #002c5b;
+}

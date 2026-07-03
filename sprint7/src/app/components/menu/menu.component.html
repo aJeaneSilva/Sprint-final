@@ -1,0 +1,18 @@
+<button class="botao-abrir-menu" (click)="alternarMenu()">☰</button>
+
+<div class="menu-lateral" [class.menu-aberto]="menuAtivo">
+  <div class="cabecalho-do-menu">
+    <h5 class="titulo-do-menu">Img logo ford</h5>
+    <button class="botao-fechar" (click)="alternarMenu()">✕</button>
+  </div>
+  <div class="corpo-do-menu">
+    <a class="item-do-menu">Página Inicial</a>
+    <a class="item-do-menu">Modelos e Veículos</a>
+    <a class="item-do-menu">Monte o Seu</a>
+    <a class="item-do-menu">Agendar Test Drive</a>
+  </div>
+  <button class="botao-dash-logt" (click)="irParaDashboard()">Dashboard</button>
+  <button class="botao-dash-logt" (click)="fazerLogout()">Logout</button>
+
+</div>
+<div class="fundo-escurecido" *ngIf="menuAtivo" (click)="alternarMenu()"></div>
