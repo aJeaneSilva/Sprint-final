@@ -1,29 +1,55 @@
-.cartao-boas-vindas {
-  background-color: #ffffff;
-  padding: 50px;
-  border-radius: 20px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-  text-align: center;
-  max-width: 450px;
-  width: 100%;
+/* --- CONTAINER PRINCIPAL --- */
+.welcome-page-container {
+  display: flex;
+  flex-direction: row; /* Lado a lado no desktop */
+  width: 100vw;
+  height: calc(100vh - 70px); /* Mantém abaixo do menu de 70px */
+  margin-top: 70px;
+  overflow: hidden;
   box-sizing: border-box;
-  z-index: 2; 
-} 
-/*teste*/
-body {
-  background-image: url("../../../../public/img/mustang.png"); 
-  background-size: contain;
+  /* Usa a cor de fundo amarela/verde do estúdio da foto */
 }
 
-.logo2 img {
-  width: 30%;
-  margin-bottom: 15px;
+/* --- SEÇÃO DA IMAGEM MENOR (DESKTOP) --- */
+.carro-fundo {
+  flex: 1; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Cria uma margem em volta da imagem para ela parecer menor */
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.carro-fundo img {
+  width: 100%;
+  height: auto;
+  max-width: 500px; /* Limita o tamanho máximo do carro para não ficar gigante */
+  object-fit: contain; /* Garante que a Ranger apareça INTEIRA, sem nenhum corte */
+}
+
+/* --- SEÇÃO DO TEXTO (DESKTOP) --- */
+.cartao-boas-vindas {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* --- Estilização Interna --- */
+.logo2 {
+  width: 120px;
+  margin-bottom: 20px;
 }
 
 .titulo-boas-vindas {
   color: #002c5b;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-bottom: 15px;
 }
 
@@ -31,23 +57,37 @@ body {
   color: #555555;
   font-size: 1.1rem;
   line-height: 1.6;
-  margin-bottom: 35px;
+  max-width: 400px;
 }
 
-.botao-painel {
-  width: 100%;
-  background-color: #104f87;
-  color: white;
-  padding: 14px;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 1.1rem;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
+/* --- 📱 RESPONSIVO: TABLETS E CELULARES --- */
+@media (max-width: 992px) {
+  .welcome-page-container {
+    flex-direction: column; /* Empilha no mobile: imagem em cima, texto embaixo */
+    height: auto;
+    min-height: calc(100vh - 70px);
+    overflow-y: auto;
+    padding-top: 20px; /* Espaço após o menu */
+  }
 
-.botao-painel:hover {
-  background-color: #002c5b;
-  transform: translateY(-2px); 
+  .carro-fundo {
+    flex: none;
+    width: 100%;
+    height: auto; /* Deixa a altura se ajustar dinamicamente ao tamanho menor */
+    padding: 10px;
+  }
+
+  .carro-fundo img {
+    max-width: 320px; /* Deixa a foto bem menorzinha no celular */
+  }
+
+  .cartao-boas-vindas {
+    flex: none;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .titulo-boas-vindas {
+    font-size: 1.6rem;
+  }
 }
