@@ -9,7 +9,7 @@
   </div>
   
   <div class="lado-do-formulario">
-    <img src="/img/ford.png" alt="Logo Ford" class="logo">
+    <img src="img/ford.png" alt="Logo Ford" class="logo">
     <form [formGroup]="loginForm" (ngSubmit)="onContinuar()" class="formulario">
       <h3 class="titulo-do-form">Entrar na Conta</h3>
       
@@ -24,12 +24,7 @@
       </div>
       
       <div class="campo-do-checkbox">
-          <input type="checkbox" class="form-check-input" id="aceitoTermos">
-          <label class="form-check-label" for="aceitoTermos">Sim. Li e concordo com os Termos e Condições</label>
-        </div>
-        <div class="campo-do-checkbox">
-          <input type="checkbox" class="form-check-input" id="aceitoTermos">
-          <label class="form-check-label" for="aceitoTermos">Sim.Também quero receber descontos e novidades.</label>
+          <label class="form-check-label" for="aceitoTermos"> Li e concordo com os <a href="">Termos e Condições</a></label>
         </div>
 
       <button type="submit" class="botao-login">Continuar</button>

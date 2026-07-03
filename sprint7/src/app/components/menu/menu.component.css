@@ -6,6 +6,9 @@
     left: 0;
     background-color: #002c5b;
 }
+img {
+  width: 35%;
+}
 
 .botao-abrir-menu {
   background-color: #104f87;
@@ -83,8 +86,19 @@
   padding-left: 35px;
 }
 
-.botao-dash-logt {
+.botao-dash {
     background-color: #104f87;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 15px;
+    transition: background-color 0.2s;
+}
+.botao-logout {
+    background-color: #ca2929;
     color: white;
     padding: 10px 20px;
     border: none;

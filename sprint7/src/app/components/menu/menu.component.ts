@@ -19,10 +19,11 @@ export class MenuComponent {
     this.router.navigate(['/dashboard']);
   }
   fazerLogout() {
-    if(!confirm("Deseja realmente sair?")) {
-      return;
-    }
+    if(confirm("Deseja realmente sair?")) {
     sessionStorage.clear();
     this.router.navigate(['/login']);
+    } else {
+      return
+    }
   }
 }

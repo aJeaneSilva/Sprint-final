@@ -8,6 +8,11 @@
   width: 100%;
   box-sizing: border-box;
   z-index: 2; 
+} 
+/*teste*/
+body {
+  background-image: url("../../../../public/img/mustang.png"); 
+  background-size: contain;
 }
 
 .logo2 img {

@@ -2,8 +2,17 @@ import { Routes } from '@angular/router';
 import { loginGuard } from './guards/login.guard';
 
 export const routes: Routes = [
+    
     {
         path: "",
+        pathMatch: "full",
+        loadComponent: () => {
+            return import("./pages/login/login.component")
+            .then((c) => c.LoginComponent);
+        }
+    },
+    {
+        path: "login",
         pathMatch: "full",
         loadComponent: () => {
             return import("./pages/login/login.component")
@@ -28,4 +37,4 @@ export const routes: Routes = [
             .then((c) => c.DashboardComponent);
         }
     }
-];
+]
