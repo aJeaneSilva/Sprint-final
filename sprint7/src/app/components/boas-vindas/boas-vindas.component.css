@@ -1,22 +1,19 @@
-/* --- CONTAINER PRINCIPAL --- */
 .welcome-page-container {
   display: flex;
-  flex-direction: row; /* Lado a lado no desktop */
+  flex-direction: row; 
   width: 100vw;
-  height: calc(100vh - 70px); /* Mantém abaixo do menu de 70px */
+  height: calc(100vh - 70px); 
   margin-top: 70px;
   overflow: hidden;
   box-sizing: border-box;
-  /* Usa a cor de fundo amarela/verde do estúdio da foto */
 }
 
-/* --- SEÇÃO DA IMAGEM MENOR (DESKTOP) --- */
 .carro-fundo {
   flex: 1; 
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px; /* Cria uma margem em volta da imagem para ela parecer menor */
+  padding: 20px;
   height: 100%;
   box-sizing: border-box;
 }
@@ -24,11 +21,9 @@
 .carro-fundo img {
   width: 100%;
   height: auto;
-  max-width: 500px; /* Limita o tamanho máximo do carro para não ficar gigante */
-  object-fit: contain; /* Garante que a Ranger apareça INTEIRA, sem nenhum corte */
+  max-width: 500px; 
+  object-fit: contain;
 }
-
-/* --- SEÇÃO DO TEXTO (DESKTOP) --- */
 .cartao-boas-vindas {
   flex: 1;
   display: flex;
@@ -40,7 +35,6 @@
   box-sizing: border-box;
 }
 
-/* --- Estilização Interna --- */
 .logo2 {
   width: 120px;
   margin-bottom: 20px;
@@ -60,25 +54,24 @@
   max-width: 400px;
 }
 
-/* --- 📱 RESPONSIVO: TABLETS E CELULARES --- */
 @media (max-width: 992px) {
   .welcome-page-container {
-    flex-direction: column; /* Empilha no mobile: imagem em cima, texto embaixo */
+    flex-direction: column;
     height: auto;
     min-height: calc(100vh - 70px);
     overflow-y: auto;
-    padding-top: 20px; /* Espaço após o menu */
+    padding-top: 20px; 
   }
 
   .carro-fundo {
     flex: none;
     width: 100%;
-    height: auto; /* Deixa a altura se ajustar dinamicamente ao tamanho menor */
+    height: auto;
     padding: 10px;
   }
 
   .carro-fundo img {
-    max-width: 320px; /* Deixa a foto bem menorzinha no celular */
+    max-width: 320px;
   }
 
   .cartao-boas-vindas {

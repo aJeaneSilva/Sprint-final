@@ -1,21 +1,47 @@
-<section class="d-flex gap-3 justify-content-around">
-<div class="shadow border border-black p-3">
-    <h2>Veículos</h2>
-    <select>
-        <option value="">Bronco Sport</option>
-        <option value="">Mustang</option>
-        <option value="">Ranger</option>
-        <option value="">Territory</option>
-    </select>
+<button class="botao-abrir-menu" (click)="alternarMenu()">☰</button>
+
+<div class="menu-lateral" [class.menu-aberto]="menuAtivo">
+  <div class="cabecalho-do-menu">
+    <img class="titulo-do-menu" src="/img/ford.png" alt="Logo Ford">
+    <button class="botao-fechar" (click)="alternarMenu()">✕</button>
+  </div>
+  <div class="corpo-do-menu">
+    <a class="item-do-menu">Página Inicial</a>
+    <a class="item-do-menu">Modelos e Veículos</a>
+    <a class="item-do-menu">Monte o Seu</a>
+    <a class="item-do-menu">Agendar Test Drive</a>
+  </div>
+  <button class="botao-dash" (click)="irParaDashboard()">Dashboard</button>
+  <button class="botao-logout" (click)="fazerLogout()">Logout</button>
+  
 </div>
+<div class="fundo-escurecido" *ngIf="menuAtivo" (click)="alternarMenu()"></div>
+
+
+
+<section class="veiculas d-flex gap-3 justify-content-around">
+<div class="tabela">
+            <div class="veiculos">
+                <h2>Veículos</h2>
+            </div>
+            <div class="seletor">
+                <select (change)="onChangeSelect($event)">
+                    @for (v of veiculos; track v.id) {
+                    <option value="{{ v.id }}">{{ v.vehicle }}</option>
+                    }
+                </select>
+            </div>
+        </div>
 
 <app-card [titulo]="'Total de Vendas'" [valor]="veiculoSelecionado.volumetotal"/>
 <app-card [titulo]="'Conectados'" [valor]="veiculoSelecionado.connected"/>
 <app-card [titulo]="'Update Software'" [valor]="veiculoSelecionado.softwareUpdates"/>
 </section>
-<section>
-    <img src="http://localhost:3001/img/broncoSport.png" alt="Carro Ford selecionado">
+<section class="vei-sel">
+    <img src="{{ veiculoSelecionado.img }}" alt="Carro Ford selecionado" class="imagem-cs">
 </section>
 <section>
-    <app-car-table></app-car-table>
+    <app-car-table [vin]="veiculoSelecionado.vin" [odometro]="vinInfos.odometro"
+            [nivelCombustivel]="vinInfos.nivelCombustivel" [status]="vinInfos.status" [lat]="vinInfos.lat"
+            [long]="vinInfos.long" />
 </section>

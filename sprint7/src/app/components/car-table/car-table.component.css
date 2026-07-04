@@ -1,0 +1,134 @@
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table-responsive table {
+  width: 100%;
+  min-width: 680px;
+  border-collapse: collapse;
+  font-family: "Montserrat", sans-serif;
+  background: white;
+}
+
+.table-responsive th,
+.table-responsive td {
+  text-align: left;
+  padding: 0.75rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.table-responsive thead {
+  background-color: #f8fbff;
+}
+
+.table-responsive th {
+  color: #1e3a5f;
+  font-weight: 700;
+}
+
+.table-responsive tr:hover {
+  background: #f6f9ff;
+}
+
+.vin-search {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.table-responsive input[type="text"] {
+  width: 100%;
+  max-width: 240px;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid #d7e2ef;
+  border-radius: 10px;
+  background: #fbfdff;
+  color: #173150;
+}
+
+.table-responsive button {
+  min-width: 120px;
+  padding: 0.65rem 0.95rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #104f87;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.table-responsive button:hover {
+  background-color: #08335d;
+}
+
+@media (max-width: 768px) {
+  .table-responsive table {
+    min-width: 520px;
+  }
+}
+
+@media (max-width: 560px) {
+  .table-responsive {
+    overflow-x: hidden;
+  }
+
+  .table-responsive table,
+  .table-responsive thead,
+  .table-responsive tbody,
+  .table-responsive tr,
+  .table-responsive th,
+  .table-responsive td {
+    display: block;
+    width: 100%;
+  }
+
+  .table-responsive thead {
+    display: none;
+  }
+
+  .table-responsive tr {
+    margin-bottom: 1rem;
+    border: 1px solid rgba(16, 79, 135, 0.12);
+    border-radius: 14px;
+    padding: 0.9rem;
+  }
+
+  .table-responsive td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid rgba(16, 79, 135, 0.08);
+  }
+
+  .table-responsive td:last-child {
+    border-bottom: none;
+  }
+
+  .table-responsive td::before {
+    content: attr(data-label);
+    font-weight: 700;
+    color: #1f3b62;
+    margin-right: 0.8rem;
+    flex: 0 0 42%;
+    max-width: 42%;
+  }
+
+  .vin-search {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .table-responsive input[type="text"],
+  .table-responsive button {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .table-responsive button {
+    margin-top: 0.5rem;
+  }
+}

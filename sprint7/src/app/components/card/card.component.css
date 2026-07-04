@@ -1,0 +1,86 @@
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.75rem;
+  border: 1px solid rgba(16, 79, 135, 0.18);
+  box-shadow: 0 18px 28px rgba(16, 79, 135, 0.08);
+  background-color: white;
+  width: 100%;
+  max-width: 100%;
+  min-height: 210px;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 20px;
+  padding: 1.2rem;
+  box-sizing: border-box;
+}
+
+.titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 45%;
+  padding: 0.9rem 0;
+  background-color: #eef4fb;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.titulo h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #16314c;
+  text-align: center;
+}
+
+.valor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0.9rem 0;
+  color: #2d4057;
+}
+
+.valor p {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+@media (max-width: 1300px) {
+  .titulo h2 {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .cards {
+    min-height: 180px;
+    padding: 1rem;
+  }
+
+  .titulo h2 {
+    font-size: 1.05rem;
+  }
+
+  .valor p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .cards {
+    min-height: 160px;
+    padding: 0.9rem;
+  }
+
+  .titulo h2 {
+    font-size: 0.98rem;
+  }
+
+  .valor p {
+    font-size: 0.95rem;
+  }
+}

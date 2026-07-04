@@ -36,7 +36,7 @@
   background-size: cover;
   background-position: center;
   position: relative;
-  min-height: 250px; /* Garante que a imagem apareça se for empilhada */
+  min-height: 250px;
 }
 
 .lado-da-imagem img {
@@ -164,9 +164,9 @@
     max-width: 450px;       
   }
 
-  /* Opcional: Se quiser esconder a imagem no celular para focar direto no login, 
-     descomente a linha abaixo e comente a regra '.lado-da-imagem' seguinte */
-  /* .lado-da-imagem { display: none; } */
+  .lado-da-imagem { 
+    display: none; 
+  }
 
   .lado-da-imagem {
     min-height: 180px;  
